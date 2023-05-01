@@ -1,0 +1,52 @@
+{
+    /* @ Fast Commands ———————————————————————————— */
+    "Var": {
+        "scope": "scss",
+        "prefix": "--",
+        "body": [
+            "var(--$1);"
+        ],
+        "description": "var(--...);"
+    },
+    "Extend": {
+        "scope": "scss",
+        "prefix": "@#",
+        "body": [
+            "@extend $1;"
+        ],
+        "description": "@extend ...;"
+    },
+    "Extend %": {
+        "scope": "scss",
+        "prefix": "@%",
+        "body": [
+            "@extend %$1;"
+        ],
+        "description": "@extend ...;"
+    },
+    "Include Mixin": {
+        "scope": "scss",
+        "prefix": "@@",
+        "body": [
+            "@include $1($2);"
+        ],
+        "description": "@include ...(..);"
+    },
+    /* @ Includes ————————————————————————————————— */
+    "Include col($);": {
+        "scope": "scss",
+        "prefix": "@@c",
+        "body": [
+            "@include col($1);"
+        ],
+        "description": "@include col(...);"
+    },
+    "Include size($);": {
+        "scope": "scss",
+        "prefix": "@@s",
+        "body": [
+            "@include size($1);"
+        ],
+        "description": "@include size(...);"
+    }
+}

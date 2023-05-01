@@ -1,0 +1,42 @@
+### SSH
+**/.ssh/id_*
+**/.ssh/*_id_*
+**/.ssh/known_hosts
+
+### NPM & PNPM
+package-lock.json
+pnpm-lock.yaml
+
+### Paths
+**/node_modules/**
+**/bower_components/**
+
+### Dirs
+public
+logs
+
+### Files
+src/sass/vendors/smart-grid.*
+projectFTP.js
+src/sass/base/_fonts.*
+
+### Others
+__MACOSX
+.Saved
+_arc
+.publish
+.DS_Store
+*.log
+*.sublime-*
+*.rar
+*.zip
+.idea
+ex_files
+Thumbs.db
+.eslintcache
+.stylelintcache
+*.tgz
+.temp
+.vscode-test
+**/CHANGELOG.md
+**/LICENSE.md

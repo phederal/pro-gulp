@@ -1,0 +1,136 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-rational-order"
+    ],
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-order",
+        "stylelint-declaration-block-no-ignored-properties"
+    ],
+    "rules": {
+        "plugin/rational-order": [
+            true,
+            {
+                "empty-line-between-groups": false
+            }
+        ],
+        "plugin/declaration-block-no-ignored-properties": true,
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true,
+        "declaration-empty-line-before": null,
+        "order/properties-order": [],
+        "indentation": 4,
+        "max-empty-lines": 1,
+        "no-empty-first-line": null,
+        "declaration-block-single-line-max-declarations": 3
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.scss",
+                "*.scss"
+            ],
+            "customSyntax": "postcss-scss",
+            "rules": {
+                "order/order": [
+                    [
+                        "dollar-variables",
+                        "custom-properties",
+                        {
+                            "type": "at-rule",
+                            "name": "include",
+                            "hasBlock": false,
+                            "groups": "sass"
+                        },
+                        {
+                            "type": "at-rule",
+                            "name": "include",
+                            "hasBlock": true,
+                            "groups": "sass"
+                        },
+                        {
+                            "type": "at-rule",
+                            "name": "include",
+                            "parameter": "breakpoint",
+                            "hasBlock": false,
+                            "groups": "sass"
+                        },
+                        {
+                            "type": "at-rule",
+                            "name": "extend",
+                            "hasBlock": false,
+                            "groups": "sass"
+                        },
+                        "declarations",
+                        {
+                            "type": "rule",
+                            "selector": "^&:(before|after)"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "^&::(before|after)"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "^&:(first-child|last-child|nth-child|last-of-type|first-of-type|nth-of-type)"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "&:hover"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "&:focus"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "&:active"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "&:disabled"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "^&:"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "^&::"
+                        },
+                        "at-rules",
+                        "rules",
+                        {
+                            "type": "rule",
+                            "selector": "^&?"
+                        },
+                        {
+                            "type": "rule",
+                            "selector": "modifiersSelector"
+                        }
+                    ]
+                ],
+                "scss/at-extend-no-missing-placeholder": null,
+                "scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+                "scss/at-mixin-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
+                "scss/dollar-variable-pattern": "^[_]?[a-z]+([a-zA-Z0-9-]-?[a-zA-Z0-9].+)?$",
+                "scss/percent-placeholder-pattern": "^([a-z][a-zA-Z0-9]*)((__)?[a-z0-9][a-zA-Z0-9])+$",
+                "scss/double-slash-comment-empty-line-before": null,
+                "scss/at-mixin-argumentless-call-parentheses": null,
+                "keyframes-name-pattern": "^([a-z][a-zA-Z0-9]*)(-?[a-z0-9]+)*$",
+                "selector-class-pattern": "^([a-z][a-zA-Z0-9]*)((__)?[a-z0-9][a-zA-Z0-9]+(--[a-z])?)*$",
+                "custom-property-pattern": "^([a-z][a-z0-9]*)(-?[a-zA-Z0-9]+)*$",
+                "selector-list-comma-newline-after": "always",
+                "max-line-length": null
+            }
+        },
+        {
+            "files": [
+                "**/*.css",
+                "*.css"
+            ],
+            "customSyntax": "css"
+        }
+    ]
+}

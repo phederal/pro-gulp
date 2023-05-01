@@ -1,0 +1,8 @@
+.vscode
+.git
+public
+gulp/**
+**/node_modules/**
+**/vendors/**/*.*
+src/*.*
+**/*.css

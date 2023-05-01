@@ -1,0 +1,32 @@
+/**
+ * Reset Margin/Padding
+ */
+@mixin reset-mp() {
+    margin: unset;
+    padding: unset;
+}
+
+/**
+ * Figma Font Size + Height + Spacing
+ * font-size / line-height / letter-spacing
+ */
+@mixin font($font-size, $line-height: false, $letter-spacing: false) {
+    font-size: rem($font-size);
+
+    @if $line-height {
+        line-height: math.div($line-height, $font-size);
+    }
+
+    @if $letter-spacing {
+        letter-spacing: rem($letter-spacing);
+    }
+}
+
+/**
+ * @cols
+ * include @col() with @size
+ */
+@mixin cols($col) {
+    @include col();
+    @include size($col);
+}

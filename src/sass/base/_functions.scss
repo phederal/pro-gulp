@@ -1,0 +1,22 @@
+/**
+ * PX to REM
+ * html font-size: 100%
+ */
+
+@function rem($value, $value2: false, $value3: false, $value4: false) {
+    $remValue: math.div($value, $globalRem) + rem;
+
+    @if $value2 {
+        $remValue: (math.div($value, $globalRem) + rem) (math.div($value2, $globalRem) + rem);
+    }
+
+    @if $value3 {
+        $remValue: (math.div($value, $globalRem) + rem) (math.div($value2, $globalRem) + rem) (math.div($value3, $globalRem) + rem);
+    }
+
+    @if $value4 {
+        $remValue: (math.div($value, $globalRem) + rem) (math.div($value2, $globalRem) + rem) (math.div($value3, $globalRem) + rem) (math.div($value4, $globalRem) + rem);
+    }
+
+    @return $remValue;
+}

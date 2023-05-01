@@ -1,0 +1,19 @@
+:root {
+    /* @ Global Vars —————————————————————————————— */
+    $globalRem: 16; // font-size: 100%
+
+    // Colors
+    $brand: #000;
+    $black: #000;
+    $dark: #000;
+    $white: #fff;
+    $light: #fff;
+
+    // Colors Text
+    $color-text-brand: $brand !default;
+    $color-text-dark: $dark !default;
+    $color-text-light: $light !default;
+
+    /* @ Browser Vars ————————————————————————————— */
+    --example: "example";
+}

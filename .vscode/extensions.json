@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "rebornix.project-snippets",
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "fabiospampinato.vscode-highlight",
+        "stylelint.vscode-stylelint",
+        "christian-kohler.npm-intellisense",
+        "devsense.phptools-vscode"
+    ]
+}

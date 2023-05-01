@@ -1,0 +1,11 @@
+{
+	"description": "use \"gulp help\"",
+	"flags.gulpfile": "gulp/gulpfile.js",
+	"flags.require": ["@swc/register"],
+	"flags.tasksDepth": 1,
+	"flags.compactTasks": false,
+	"flags.continue": true,
+	"flags.series": true,
+	"flags.silent": false,
+	"flags.logLevel": 2
+}

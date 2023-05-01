@@ -1,0 +1,12 @@
+/* @ Placeholders ————————————————————————————— */
+%trans {
+    transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+%trans-btn {
+    transition: all;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+}

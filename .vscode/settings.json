@@ -1,0 +1,139 @@
+{
+    /* @ Explorer Exclude ————————————————————————— */
+    "files.exclude": {
+        "**/.vscode": true,
+        "**/.gitkeep": true,
+        "**/%webp.js": true,
+        ".git": true,
+        ".editorconfig": true,
+        ".eslintrc": true,
+        ".eslintignore": true,
+        ".stylelintrc": true,
+        ".stylelintignore": true,
+        ".gitignore": true,
+        ".gulp.json": true,
+        ".npmrc": true,
+        ".swcrc": true,
+        "node_modules": true,
+        "gulp": true,
+        "README.md": true
+    },
+    /* @ Format Files ————————————————————————————— */
+    "editor.formatOnPaste": false, // required
+    "editor.formatOnType": false, // required
+    "editor.formatOnSave": true, // optional
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "files.autoSave": "off", // optional but recommended
+    /* @ For Each Language ————————————— */
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[scss]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": true
+        },
+    },
+    "[css]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": true
+        },
+    },
+    /* @ Stylelint ———————————————————————————————— */
+    "scss.validate": false,
+    "css.validate": false,
+    "stylelint.packageManager": "pnpm",
+    "stylelint.snippet": [
+        "css",
+        "scss"
+    ],
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    /* @ Кастомная подстветка ————————————————————— */
+    "highlight.regexes": {
+        // Подстветка @include в HTML (1 string)
+        "(@include)(\\(\")(.*?)(\"\\))": {
+            "regexFlags": "gi",
+            "filterLanguageRegex": "html|php",
+            "filterFileRegex": ".*\\.[html|php]",
+            "decorations": [
+                {
+                    "color": "#ff6192",
+                },
+                {
+                    "color": "#F8AC45",
+                },
+                {
+                    "color": "#B3E577"
+                },
+                {
+                    "color": "#F8AC45",
+                }
+            ]
+        },
+        // Подстветка @include в HTML (multi string)
+        "(@include)(\\()((.|\n|\r)*?(\\}))(\\))": {
+            "regexFlags": "gim",
+            "filterLanguageRegex": "html|php",
+            "filterFileRegex": ".*\\.[html|php]",
+            "decorations": [
+                {
+                    "color": "#ff6192",
+                },
+                {
+                    "color": "#F8AC45",
+                },
+                {
+                    "color": "#B3E577"
+                },
+                {
+                    "color": "#F8AC45",
+                }
+            ]
+        },
+        // Подстветка @loop в HTML
+        "(@loop)(\\()(\".*?\")(\\,)(.*?)(\\))": {
+            "regexFlags": "gi",
+            "filterLanguageRegex": "html|php",
+            "filterFileRegex": ".*\\.[html|php]",
+            "decorations": [
+                {
+                    "color": "#ff6192",
+                },
+                {
+                    "color": "#F8AC45",
+                },
+                {
+                    "color": "#B3E577"
+                },
+                {
+                    "color": "#F8AC45",
+                },
+                {
+                    "color": "#B3E577"
+                },
+                {
+                    "color": "#F8AC45",
+                }
+            ]
+        }
+    },
+    "highlight.maxMatches": 100,
+    "php.format.codeStyle": "K&R",
+    "php.highlight-todo.enable": false,
+    "php.problems.scope": "none"
+}

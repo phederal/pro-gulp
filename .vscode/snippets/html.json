@@ -1,0 +1,130 @@
+{
+    "@include ...": {
+        "prefix": "--include",
+        "body": [
+            "@include(\"${1:partials}${2:/file.html}\")"
+        ],
+        "description": "@include(...)"
+    },
+    "@include partials/...": {
+        "prefix": "--partials",
+        "body": [
+            "@include(\"partials${1:/file.html}\")"
+        ],
+        "description": "@include(...)"
+    },
+    "@include pages/...": {
+        "prefix": "--pages",
+        "body": [
+            "@include(\"pages/${1:home}${2:/file.html}\")"
+        ],
+        "description": "@include(...)"
+    },
+    "@loop ...": {
+        "prefix": "--loop",
+        "body": [
+            "@loop(\"templates${1:/file.html}\", \"..\/data${2:/file.json}\")"
+        ],
+        "description": "@loop(..., ...)"
+    },
+    "@webRoot": {
+        "prefix": "--web",
+        "body": [
+            "@webRoot"
+        ],
+        "description": "@webRoot - root dir"
+    },
+    "sprite:color": {
+        "prefix": "--sprite-color",
+        "body": [
+            "<img src=\"/img/sprite/multi.svg#${1:spriteName}\">"
+        ],
+        "description": "sprite color snippet"
+    },
+    "sprite:mono": {
+        "prefix": "--sprite-mono",
+        "body": [
+            "<img src=\"/img/sprite/mono.svg#${1:spriteName}\">"
+        ],
+        "description": "sprite mono snippet"
+    },
+    "img": {
+        "prefix": "--img",
+        "body": [
+            "<img src=\"/img/${1:image}.${2:jpg}\">"
+        ],
+        "description": "image snippet *"
+    },
+    "img:jpg": {
+        "prefix": "--img-jpg",
+        "body": [
+            "<img src=\"/img/${1:image}.jpg\">"
+        ],
+        "description": "image snippet jpg"
+    },
+    "img:png": {
+        "prefix": "--img-png",
+        "body": [
+            "<img src=\"/img/${1:image}.png\">"
+        ],
+        "description": "image snippet png"
+    },
+    "img:svg": {
+        "prefix": "--img-svg",
+        "body": [
+            "<img src=\"/img/${1:image}.svg\">"
+        ],
+        "description": "image snippet svg"
+    },
+    "swiper": {
+        "prefix": "--swiper",
+        "body": [
+            "<div class=\"swiper ${1:block}\">",
+            "    <div class=\"swiper-wrapper\">",
+            "        <div class=\"swiper-slide\">",
+            "            ${2:Example content}",
+            "        </div>",
+            "    </div>",
+            "</div>"
+        ],
+        "description": "Snippet for basic swiper structure"
+    },
+    "swiper-full": {
+        "prefix": "--swiper-full",
+        "body": [
+            "<!-- Slider main container -->",
+            "<div class=\"swiper ${1:block}\">",
+            "<!-- Additional required wrapper -->",
+            "<div class=\"swiper-wrapper\">",
+            "    <!-- Slides -->",
+            "    <div class=\"swiper-slide\">${2:Example content}</div>",
+            "    <div class=\"swiper-slide\">${2:Example content}</div>",
+            "    <div class=\"swiper-slide\">${2:Example content}</div>",
+            "    ...",
+            "</div>",
+            "<!-- If we need pagination -->",
+            "<div class=\"swiper-pagination\"></div>",
+            "",
+            "<!-- If we need navigation buttons -->",
+            "<div class=\"swiper-button-prev\"></div>",
+            "<div class=\"swiper-button-next\"></div>",
+            "",
+            "<!-- If we need scrollbar -->",
+            "<div class=\"swiper-scrollbar\"></div>",
+            "</div>"
+        ],
+        "description": "Snippet for full swiper structure"
+    },
+    "Github Issue: Collapsable Details": {
+        "scope": "html",
+        "prefix": "Issue",
+        "body": [
+            "<details><summary>",
+            "${1:Summary} (Click to Expand) ${2:another}",
+            "</summary>",
+            "${0:$TM_SELECTED_TEXT}",
+            "</details>"
+        ],
+        "description": "Gulp: Collapsable Detail Section"
+    }
+}

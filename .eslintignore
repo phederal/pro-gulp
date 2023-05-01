@@ -1,0 +1,10 @@
+.vscode
+.git
+node_modules
+public
+**/*.min.*
+**/vendors/**/*.*
+**/components/**/*
+**/js/**
+!src/js/**
+src/*.*
